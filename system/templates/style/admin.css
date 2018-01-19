@@ -494,3 +494,5 @@ input[type="button"]:focus,input[type="submit"]:focus{outline:none;}
 .colorBf{color:#bfbfbf;}
 .test-color{color:#039}/*专门获取颜色用的样式，文件内无引用*/
 
+.vername{ color: red; }
+

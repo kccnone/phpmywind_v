@@ -93,13 +93,30 @@ if($action == 'delall')
 		</span> <span class="b"><a href="javascript:;" onclick="GetSearch();"></a></span></div>
 	<div class="cl"></div>
 </div>
+<?php
+			$infover = array();  
+			$dosql->Execute("SELECT * FROM `#@__infover` ORDER BY orderid ASC",'infover');
+			while($row = $dosql->GetArray('infover'))
+			{
+				$infover[$row['flag']] = $row['flagname'];
+			}
+			$infoverl = count($infover);
+?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" id="ajaxlist" class="dataTable">
 	<tr align="left" class="head">
 		<td width="5%" height="36" class="firstCol"><input type="checkbox" name="checkid" id="checkid" onclick="CheckAll(this.checked);"></td>
 		<td width="10%">缩略图</td>
 		<td width="5%">ID</td>
-		<td width="30%">标题</td>
+		<td width="20%">标题</td>
 		<td width="15%">栏目</td>
+		<?php
+			if($infoverl>1){
+		?>
+		<td width="10%"><span  class="vertag">版本</span></td>
+		<?php
+
+			}
+		?>
 		<td width="15%">更新时间</td>
 		<td width="15%" class="endCol">操作</td>
 	</tr>
@@ -295,6 +312,14 @@ if(!empty($ver)) $sql .= " AND ver='$ver'";
 		<td><?php echo $row['id']; ?></td>
 		<td><?php echo $title; ?></td>
 		<td><?php echo $classname; ?></td>
+		<?php
+			if($infoverl>1){
+		?>
+		<td><span class="vername" ><?php echo $infover[$row['ver']]; ?></span></td>
+		<?php
+
+			}
+		?>			
 		<td class="number"><?php echo GetDateTime($row['posttime']); ?></td>
 		<td class="action endCol"><span id="check<?php echo $row['id']; ?>"><?php echo $checkStr; ?></span> | <span><?php echo $updateStr; ?></span> | <span><?php echo $copyStr; ?></span> | <span class="nb"><?php echo $delStr; ?></span></td>
 	</tr>
