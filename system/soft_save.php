@@ -241,7 +241,7 @@ if($action == 'add')
 	}
 
 
-	$sql = "INSERT INTO `$tbname` (siteid,ver, classid, parentid, parentstr, mainid, mainpid, mainpstr, title, colorval, boldval, flag, filetype, softtype, language, accredit, softsize, unit, runos, website, demourl, dlurl, source, author, linkurl, keywords, description, content, picurl, picarr, orderid, hits, posttime, checkinfo {$fieldname}) VALUES ('$cfg_siteid', '$ver','$classid', '$parentid', '$parentstr', '$mainid', '$mainpid', '$mainpstr', '$title', '$colorval', '$boldval', '$flag', '$filetype', '$softtype', '$language', '$accredit', '$softsize', '$unit', '$runos', '$website', '$demourl', '$dlurl', '$source', '$author', '$linkurl', '$keywords', '$description', '$content', '$picurl', '$picarr', '$orderid', '$hits', '$posttime', '$checkinfo' {$fieldvalue})";
+	$sql = "INSERT INTO `$tbname` (siteid,ver, classid, parentid, parentstr, mainid, mainpid, mainpstr, title, colorval, boldval, flag, filetype, softtype, language, accredit, softsize, unit, runos, website, demourl, dlurl,dlname, source, author, linkurl, keywords, description, content, picurl, picarr, orderid, hits, posttime, checkinfo {$fieldname}) VALUES ('$cfg_siteid', '$ver','$classid', '$parentid', '$parentstr', '$mainid', '$mainpid', '$mainpstr', '$title', '$colorval', '$boldval', '$flag', '$filetype', '$softtype', '$language', '$accredit', '$softsize', '$unit', '$runos', '$website', '$demourl', '$dlurl','$dlname', '$source', '$author', '$linkurl', '$keywords', '$description', '$content', '$picurl', '$picarr', '$orderid', '$hits', '$posttime', '$checkinfo' {$fieldvalue})";
 	if($dosql->ExecNoneQuery($sql))
 	{
 		header("location:$gourl");
@@ -470,7 +470,7 @@ else if($action == 'update')
 	}
 
 
-	$sql = "UPDATE `$tbname` SET siteid='$cfg_siteid', ver='$ver', classid='$classid',parentid='$parentid', parentstr='$parentstr', mainid='$mainid', mainpid='$mainpid', mainpstr='$mainpstr', title='$title', colorval='$colorval', boldval='$boldval', flag='$flag', filetype='$filetype', softtype='$softtype', language='$language', accredit='$accredit', softsize='$softsize', unit='$unit', runos='$runos', website='$website', demourl='$demourl', dlurl='$dlurl', source='$source', author='$author', linkurl='$linkurl', keywords='$keywords', description='$description', content='$content', picurl='$picurl', picarr='$picarr', orderid='$orderid', hits='$hits', posttime='$posttime', checkinfo='$checkinfo' {$fieldstr} WHERE id=$id";
+	$sql = "UPDATE `$tbname` SET siteid='$cfg_siteid', ver='$ver', classid='$classid',parentid='$parentid', parentstr='$parentstr', mainid='$mainid', mainpid='$mainpid', mainpstr='$mainpstr', title='$title', colorval='$colorval', boldval='$boldval', flag='$flag', filetype='$filetype', softtype='$softtype', language='$language', accredit='$accredit', softsize='$softsize', unit='$unit', runos='$runos', website='$website', demourl='$demourl', dlurl='$dlurl', dlname='$dlname', source='$source', author='$author', linkurl='$linkurl', keywords='$keywords', description='$description', content='$content', picurl='$picurl', picarr='$picarr', orderid='$orderid', hits='$hits', posttime='$posttime', checkinfo='$checkinfo' {$fieldstr} WHERE id=$id";
 	if($dosql->ExecNoneQuery($sql))
 	{
 		header("location:$gourl");
