@@ -105,8 +105,8 @@ if($action == 'delall')
 <table width="100%" border="0" cellpadding="0" cellspacing="0" id="ajaxlist" class="dataTable">
 	<tr align="left" class="head">
 		<td width="5%" height="36" class="firstCol"><input type="checkbox" name="checkid" id="checkid" onclick="CheckAll(this.checked);"></td>
-		<td width="10%">缩略图</td>
-		<td width="5%">ID</td>
+        <td width="5%">ID</td>
+        <td width="10%">缩略图</td>
 		<td width="20%">标题</td>
 		<td width="15%">栏目</td>
 		<?php
@@ -308,8 +308,8 @@ if(!empty($ver)) $sql .= " AND ver='$ver'";
 	?>
 	<tr align="left" class="dataTr" onmouseover="this.className='dataTrOn'" onmouseout="this.className='dataTr'">
 		<td height="36" class="firstCol"><input type="checkbox" name="checkid[]" id="checkid[]" value="<?php echo $row['id']; ?>" /></td>
+        <td><?php echo $row['id']; ?></td>
 		<td><span class="thumbs"><?php echo GetMgrThumbs($row['picurl']); ?></span></td>
-		<td><?php echo $row['id']; ?></td>
 		<td><?php echo $title; ?></td>
 		<td><?php echo $classname; ?></td>
 		<?php

@@ -95,6 +95,11 @@ $row = $dosql->GetOne("SELECT * FROM `#@__infoimg` WHERE `id`=$id");
 		<tr class="nb">
 			<td colspan="2" height="26"><div class="line"> </div></td>
 		</tr>
+        <tr class="nb">
+            <td colspan="2" height="0" id="df"><?php
+                echo GetDiyField('2',$row['classid'],$row);
+                ?></td>
+        </tr>
 		<tr>
 			<td height="40" align="right">文章来源：</td>
 			<td><input type="text" name="source" id="source" class="input" value="<?php echo $row['source']; ?>" />

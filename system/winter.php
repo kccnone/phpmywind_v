@@ -20,7 +20,7 @@ $(function(){
 <span class="alltype">
 	<a href="javascript:;" onclick="GetType('','全部栏目',$(this))" class="btn">全部栏目</a>
 	<span class="drop">
-	<?php GetMgrAjaxType('#@__infoclass',10); ?>
+	<?php GetMgrAjaxType('#@__infoclass',9); ?>
 	</span>
 </span>
 <span class="alltype">

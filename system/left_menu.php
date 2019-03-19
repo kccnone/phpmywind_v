@@ -83,7 +83,7 @@
 				<div class="title" onclick="DisplayMenu('leftmenu06');" title="点击切换显示或隐藏"> 帮助与更新 </div>
 				<div id="leftmenu06" style="display:none;"> <a href="sysevent.php" target="main">操作日志</a> <a href="syscount.php" target="main">数据统计</a>
 					<div class="hr_1"> </div>
-					<a href="upload_file.php" target="main">上传新文件</a> <a href="check_bom.php" target="main">BOM检查</a> <a href="http://www.kccn.net/help" target="main">后台使用手册</a> </div>
+					<a href="upload_file.php" target="main">上传新文件</a> <a href="check_bom.php" target="main">BOM检查</a> <a href="http://help.kccn.net" target="main">后台使用手册</a> </div>
 			</div>
 			<!--scrollbar end--> 
 		</div>
@@ -91,7 +91,7 @@
 </div>
 <div class="bGradient"></div>
 
-<div class="copyright"> © 2015 KCCN<br />
+<div class="copyright"> © 2019 KCCN<br />
 	All Rights Reserved. 
 </div>
 </body>

@@ -36,12 +36,12 @@ if($action == 'add')
 			$siteid  = $_SESSION['siteid'];
 			$classid = $dosql->GetLastID();
 			if(false){
-				foreach(array('list','add','update','del','listc','updatec','delc','addc') as $v)
+				foreach(array('list','add','update','del','listc','youhc','updatec','delc','addc') as $v)
 				{
 					$dosql->ExecNoneQuery("INSERT INTO `#@__adminprivacy` (groupid, siteid, model, classid, action) VALUES ('$groupid', '$siteid', 'category', '$classid', '$v')");
 				}				
 			}else{
-				foreach(array('list','add','update','del','listc','updatec','delc') as $v)
+				foreach(array('list','add','update','del','listc','youhc','updatec','delc') as $v)
 				{
 					$dosql->ExecNoneQuery("INSERT INTO `#@__adminprivacy` (groupid, siteid, model, classid, action) VALUES ('$groupid', '$siteid', 'category', '$classid', '$v')");
 				}				

@@ -18,7 +18,14 @@
 </style>
 </head>
 <body>
-<div class="quickBtn"> <span class="quickBtnLeft"><a href="infolist_add.php" target="main">添新闻</a></span> <span class="quickBtnRight"><a href="goods_add.php" target="main">添产品</a></span> </div>
+<div class="quickBtn">
+    <span class="quickBtnLeft">
+        <a href="infolist_add.php" target="main">添新闻</a>
+    </span>
+    <span class="quickBtnRight">
+        <a href="goods_add.php" target="main">添产品</a>
+    </span>
+</div>
 
 <div class="tGradient"></div>
 <div id="scrollmenu">
@@ -113,7 +120,7 @@
 				$leftMenu06_Arr = array('syscount'=>'<a href="syscount.php" target="main">数据统计</a>',
 									'upload_file'=>'<a href="upload_file.php" target="main">上传新文件</a>',
 									'check_bom'=>'<a href="check_bom.php" target="main">BOM检查</a>',
-									'help'=>'<a href="http://www.kccn.net/help" target="main">后台使用手册</a>');
+									'help'=>'<a href="http://help.kccn.net" target="main">后台使用手册</a>');
 	
 	
 	
@@ -300,7 +307,7 @@
 	</div>
 </div>
 <div class="bGradient"></div>
-<div class="copyright"> © 2015 KCCN<br />
+<div class="copyright"> © 2019 KCCN<br />
 	All Rights Reserved. 
 </div>
 <div class="tabMenu">
