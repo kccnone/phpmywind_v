@@ -264,8 +264,8 @@ if(!empty($ver)) $sql .= " AND ver='$ver'";
 		if($cfg_adminlevel != 1)
 		{
 			if(in_array($row['classid'], $catgoryUpdatePriv)){
-				$updateStr = '<a href="autumn_update.php?cid='.$cid.'&id='.$row['id'].'&flag='.$flag.'&page='.$page.'&keyword='.$keyword.'&ver='.$ver.'">修改</a>';
-				$copyStr = '<a href="autumn_copy.php?cid='.$cid.'&id='.$row['id'].'">复制</a>';
+				$updateStr = '<a href="winter_update.php?cid='.$cid.'&id='.$row['id'].'&flag='.$flag.'&page='.$page.'&keyword='.$keyword.'&ver='.$ver.'">修改</a>';
+				$copyStr = '<a href="winter_copy.php?cid='.$cid.'&id='.$row['id'].'">复制</a>';
 			}
 			else{
 				$updateStr = '修改';
@@ -274,8 +274,8 @@ if(!empty($ver)) $sql .= " AND ver='$ver'";
 		}
 		else
 		{
-				$updateStr = '<a href="autumn_update.php?cid='.$cid.'&id='.$row['id'].'&flag='.$flag.'&page='.$page.'&keyword='.$keyword.'&ver='.$ver.'">修改</a>';
-				$copyStr = '<a href="autumn_copy.php?cid='.$cid.'&id='.$row['id'].'">复制</a>';
+				$updateStr = '<a href="winter_update.php?cid='.$cid.'&id='.$row['id'].'&flag='.$flag.'&page='.$page.'&keyword='.$keyword.'&ver='.$ver.'">修改</a>';
+				$copyStr = '<a href="winter_copy.php?cid='.$cid.'&id='.$row['id'].'">复制</a>';
 		}
 
 

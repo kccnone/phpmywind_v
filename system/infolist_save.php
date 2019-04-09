@@ -1,6 +1,7 @@
 <?php	require_once(dirname(__FILE__).'/inc/config.inc.php');IsModelPriv('infolist');
 //require_once(dirname(__FILE__).'/filter/Filter.php');
 //$filter = new Filter();
+error_reporting(0);
 /*
 **************************
 
