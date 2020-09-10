@@ -63,7 +63,10 @@ class imgcompress
   {
       $new_width = $this->imageinfo['width'] * $this->percent;
       $new_height = $this->imageinfo['height'] * $this->percent;
-      $image_thump = imagecreate($new_width,$new_height);
+      if($this->imageinfo['type'] == 'png')
+          $image_thump = imagecreate($new_width,$new_height);
+      else
+          $image_thump = imagecreatetruecolor($new_width,$new_height);
       $white = imagecolorallocatealpha($image_thump,255,255,255,127);//加透明色
       imagefill($image_thump,0,0,$white);
       //将原图复制带图片载体上面，并且按照一定比例压缩,极大的保持了清晰度
